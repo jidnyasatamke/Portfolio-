@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Palindrome Checker</title>
+</head>
+<body>
+  <h2>Palindrome Checker</h2>
+  <input id="pal-input" placeholder="Enter text">
+  <button onclick="checkPal()">Check</button>
+  <p id="pal-result"></p>
+  <script>
+    function checkPal() {
+      const text = document.getElementById('pal-input').value.replace(/[W_]/g, '').toLowerCase();
+      const reversed = text.split('').reverse().join('');
+      document.getElementById('pal-result').innerText =
+        text && (text === reversed ? "Palindrome!" : "Not a palindrome.");
+    }
+  </script>
+</body>
+</html>
