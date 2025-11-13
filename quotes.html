@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Random Quote Generator</title>
+</head>
+<body>
+  <h1>Random Quote Generator</h1>
+  <button onclick="showQuote()">Show Quote</button>
+  <p id="quote"></p>
+  <script>
+    var quotes = [
+      "Believe in yourself!",
+      "Keep learning every day.",
+      "Success is a journey, not a destination.",
+      "Mistakes are proof that you are trying.",
+      "Dream big, work hard."
+    ];
+    function showQuote() {
+      var randomIndex = Math.floor(Math.random() * quotes.length);
+      document.getElementById('quote').innerText = quotes[randomIndex];
+    }
+  </script>
+</body>
+</html>
