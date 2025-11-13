@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Text Reverser</title>
+</head>
+<body>
+  <h2>Text Reverser</h2>
+  <input id="input" placeholder="Enter text">
+  <button onclick="reverseText()">Reverse</button>
+  <p id="output"></p>
+  <script>
+    function reverseText() {
+      const value = document.getElementById('input').value;
+      document.getElementById('output').innerText =
+        "Reversed: " + value.split('').reverse().join('');
+    }
+  </script>
+</body>
+</html>
